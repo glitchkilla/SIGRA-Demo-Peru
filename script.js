@@ -346,14 +346,40 @@ function renderPayment() {
 }
 
 function renderDeliveries() {
-    const mapEmbedUrl = "https://maps.google.com/maps?q=Chimbote,+Peru&t=&z=13&ie=UTF8&iwloc=&output=embed";
+    // CAMBIO: URL oficial de Google Maps centrada en todo el país (PERÚ)
+    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15800000!2d-75.015152!3d-9.189967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c850c05914f5%3A0xf29e011279210648!2sPer%C3%BA!5e0!3m2!1ses!2spe";
+    
     return `
     <div class="animate-fadeIn">
         <h2 class="text-3xl font-extrabold mb-6">Mapa de Entregas</h2>
-        <div class="h-96 bg-gray-200 rounded-lg mb-6 overflow-hidden relative border shadow-inner map-container"><iframe src="${mapEmbedUrl}" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        
+        <div class="h-96 bg-gray-200 rounded-lg mb-6 overflow-hidden relative border shadow-inner map-container">
+            <iframe 
+                src="${mapEmbedUrl}" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
         <h3 class="font-bold text-lg mb-4">En Curso</h3>
         <div class="space-y-3">
-            ${DB.deliveries.map(d => `<div class="bg-white p-4 rounded border shadow-sm flex justify-between items-center"><div><h4 class="font-bold">${d.material}</h4><p class="text-sm text-gray-500">${d.supplier} • ${d.quantity}</p></div><div class="text-right"><span class="inline-block px-2 py-1 text-xs font-bold uppercase rounded ${d.status === 'en ruta' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${d.status}</span><p class="text-xs text-gray-400 mt-1 font-mono">${d.estimatedArrival}</p></div></div>`).join('')}
+            ${DB.deliveries.map(d => `
+                <div class="bg-white p-4 rounded border shadow-sm flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold">${d.material}</h4>
+                        <p class="text-sm text-gray-500">${d.supplier} • ${d.quantity}</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="inline-block px-2 py-1 text-xs font-bold uppercase rounded ${d.status === 'en ruta' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${d.status}</span>
+                        <p class="text-xs text-gray-400 mt-1 font-mono">${d.estimatedArrival}</p>
+                    </div>
+                </div>
+            `).join('')}
         </div>
     </div>`;
 }
