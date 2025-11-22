@@ -21,7 +21,7 @@ const state = {
 // Base de datos simulada
 const DB = {
     suppliers: [
-        { id: 1, name: "ConstruMateriales Perú S.A.", rating: 4.8, reviews: 156, location: "Lima", specialty: "Materiales Generales", certifications: ["ISO 9001"], products: [{ id: 101, name: "Bolsa de Cemento Sol", price: 28.50, imageUrl: "https://placehold.co/300x300/e0e0e0/555?text=Cemento" }] },
+        { id: 1, name: "ConstruMateriales Perú S.A.", rating: 4.8, reviews: 156, location: "Lima", specialty: "Materiales Generales", certifications: ["ISO 9001"], products: [{ id: 101, name: "Bolsa de Cemento Sol", price: 28.50, imageUrl: "https://promart.vteximg.com.br/arquivos/ids/7133522-700-700/22662.jpg" }] },
         { id: 2, name: "EcoCementos del Sur", rating: 4.6, reviews: 89, location: "Arequipa", specialty: "Cementos Ecológicos", certifications: ["Sostenibilidad"], products: [{ id: 201, name: "Bolsa Eco R-40", price: 32.00, imageUrl: "https://placehold.co/300x300/e0e0e0/555?text=Eco" }] },
         { id: 3, name: "Acero Premium Trujillo", rating: 4.9, reviews: 203, location: "Trujillo", specialty: "Acero y Metales", certifications: ["Calidad"], products: [{ id: 301, name: "Varilla 1/2\"", price: 45.00, imageUrl: "https://placehold.co/300x300/e0e0e0/555?text=Acero" }] },
         { id: 4, name: "Ferretería El Puerto S.A.C.", rating: 4.4, reviews: 95, location: "Chimbote", specialty: "Materiales Generales", certifications: ["Local"], products: [{ id: 401, name: "Agregado Grueso (m3)", price: 55.00, imageUrl: "https://placehold.co/300x300/e0e0e0/555?text=Agregado" }] },
