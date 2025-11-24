@@ -21,12 +21,96 @@ const state = {
 // Base de datos simulada
 const DB = {
     suppliers: [
-        { id: 1, name: "ConstruMateriales Perú S.A.", rating: 4.8, reviews: 156, location: "Lima", specialty: "Materiales Generales", certifications: ["ISO 9001"], products: [{ id: 101, name: "Bolsa de Cemento Sol", price: 28.50, imageUrl: "https://promart.vteximg.com.br/arquivos/ids/7133522-700-700/22662.jpg" }] },
-        { id: 2, name: "EcoCementos del Sur", rating: 4.6, reviews: 89, location: "Arequipa", specialty: "Cementos Ecológicos", certifications: ["Sostenibilidad"], products: [{ id: 201, name: "Bolsa Eco R-40", price: 32.00, imageUrl: "https://storage.googleapis.com/pacasmayo-profesional/images/tipoi16102023.png" }] },
-        { id: 3, name: "Acero Premium Trujillo", rating: 4.9, reviews: 203, location: "Trujillo", specialty: "Acero y Metales", certifications: ["Calidad"], products: [{ id: 301, name: "Varilla 1/2\"", price: 45.00, imageUrl: "https://acerosarequipa.com/sites/default/files/productos/2023-02/baco-615%20%281%29.jpg" }] },
-        { id: 4, name: "Ferretería El Puerto S.A.C.", rating: 4.4, reviews: 95, location: "Chimbote", specialty: "Materiales Generales", certifications: ["Local"], products: [{ id: 401, name: "Agregado Grueso (m3)", price: 55.00, imageUrl: "https://insumosfirstpro.com/wp-content/uploads/2022/04/ARENA-GRUESA-POR-MT3.png" }] },
-        { id: 5, name: "Concretos del Norte", rating: 4.7, reviews: 42, location: "Nuevo Chimbote", specialty: "Concreto Premezclado", certifications: ["ISO 9001"], products: [{ id: 501, name: "Mixer Concreto 210", price: 320.00, imageUrl: "https://ventasyofertas.com.pe/wp-content/uploads/2025/03/MX180-3P.jpg" }] },
-        { id: 6, name: "Distribuidora Santa Rosa", rating: 4.2, reviews: 30, location: "Chimbote", specialty: "Acabados y Pinturas", certifications: ["Garantía"], products: [{ id: 601, name: "Balde Pintura Látex", price: 85.00, imageUrl: "https://promart.vteximg.com.br/arquivos/ids/8889223-700-700/135960.jpg" }] }
+        { 
+            id: 1, 
+            name: "ConstruMateriales Perú S.A.", 
+            rating: 4.8, 
+            reviews: 156, 
+            location: "Lima", 
+            specialty: "Materiales Generales",
+            certifications: ["ISO 9001"], 
+            products: [
+                { id: 101, name: "Bolsa de Cemento Sol", price: 28.50, imageUrl: "https://promart.vteximg.com.br/arquivos/ids/7133522-700-700/22662.jpg" },
+                { id: 102, name: "Ladrillo King Kong 18 Huecos", price: 1.80, imageUrl: "https://d34fyu2ua7aizz.cloudfront.net/images/product/43/large/ts_image_61bb5f51482ec4_87680737.jpg" },
+                { id: 103, name: "Fierro Corrugado 1/2 x 9m", price: 42.00, imageUrl: "https://corcaf.com.pe/storage/media/bWc1PTtFabmOz0tgEB8DsNxMFWcAFvRWFjyA1LZA.jpg" },
+                { id: 104, name: "Arena Gruesa (m3)", price: 60.00, imageUrl: "https://tse4.mm.bing.net/th/id/OIP.LCkOPU_GonX4Hi7htsdnRQHaHa?w=550&h=550&rs=1&pid=ImgDetMain&o=7&rm=3" }
+            ] 
+        },
+        { 
+            id: 2, 
+            name: "EcoCementos del Sur", 
+            rating: 4.6, 
+            reviews: 89, 
+            location: "Arequipa", 
+            specialty: "Cementos Ecológicos",
+            certifications: ["Sostenibilidad"], 
+            products: [
+                { id: 201, name: "Bolsa Eco R-40", price: 32.00, imageUrl: "https://media.admagazine.com/photos/634dc888540cc6f7dcac29e3/master/w_1600%2Cc_limit/holcim-cemento-1.jpg" },
+                { id: 202, name: "Bloqueta de Concreto 12x20x40", price: 3.50, imageUrl: "https://grupomorenopa.com/media/static/images/productos/001-000002-BLOQUE-DE-4-DUROBLOCK.jpg" },
+                { id: 203, name: "Adoquín Rectangular Gris", price: 1.20, imageUrl: "https://media.cdn.bauhaus/m/539109/12.jpg" },
+                { id: 204, name: "Pegamento para Mayólica (25kg)", price: 22.00, imageUrl: "https://cdn.shopify.com/s/files/1/0566/2729/8480/products/PEGAMENTO-PARA-MAYOLICA-25KG_900x.jpg?v=1649089492" }
+            ] 
+        },
+        { 
+            id: 3, 
+            name: "Acero Premium Trujillo", 
+            rating: 4.9, 
+            reviews: 203, 
+            location: "Trujillo", 
+            specialty: "Acero y Metales",
+            certifications: ["Calidad"], 
+            products: [
+                { id: 301, name: "Varilla 1/2\"", price: 45.00, imageUrl: "https://tse4.mm.bing.net/th/id/OIP.ETbFdKPQ3huR-NkZEaqTxAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" },
+                { id: 302, name: "Alambre Recocido N°16 (kg)", price: 6.50, imageUrl: "https://d34fyu2ua7aizz.cloudfront.net/images/product/6/large/ts_image_5e7109a01f3ae4_35426467.png" },
+                { id: 303, name: "Clavos para Madera 3\"", price: 8.00, imageUrl: "https://h79.mx/cdn/shop/files/173041_c1c23581-8f32-4f7f-bd4a-24ed1a93caa0.webp?v=1738283042&width=1946" },
+                { id: 304, name: "Estribos de Fierro 6mm", price: 1.50, imageUrl: "https://tse2.mm.bing.net/th/id/OIP.4MlH1FPMV_7BmA_WpfL7nAHaFa?rs=1&pid=ImgDetMain&o=7&rm=3" }
+            ] 
+        },
+        { 
+            id: 4, 
+            name: "Ferretería El Puerto S.A.C.", 
+            rating: 4.4, 
+            reviews: 95, 
+            location: "Chimbote", 
+            specialty: "Materiales Generales",
+            certifications: ["Local"], 
+            products: [
+                { id: 401, name: "Agregado Grueso (m3)", price: 55.00, imageUrl: "https://insumosfirstpro.com/wp-content/uploads/2022/04/ARENA-GRUESA-POR-MT3.png" },
+                { id: 402, name: "Yeso Cerámico (Bolsa 15kg)", price: 12.00, imageUrl: "https://ad088188ac.clvaw-cdnwnd.com/88bf568dfec2ed38abae06a5b1995677/200001648-15c5915c5b/700/YESO%2015KG.jpeg?ph=ad088188ac" },
+                { id: 403, name: "Tubería PVC Sal Desague 4\"", price: 25.00, imageUrl: "https://tse3.mm.bing.net/th/id/OIP.hy1RifQdjG2ATw698lTm_gHaDt?rs=1&pid=ImgDetMain&o=7&rm=3" },
+                { id: 404, name: "Codo PVC Sal 4\" x 90°", price: 5.50, imageUrl: "https://grako.pe/wp-content/uploads/2023/08/CODO-PAVCO.jpg" }
+            ] 
+        },
+        { 
+            id: 5, 
+            name: "Concretos del Norte", 
+            rating: 4.7, 
+            reviews: 42, 
+            location: "Nuevo Chimbote", 
+            specialty: "Concreto Premezclado",
+            certifications: ["ISO 9001"], 
+            products: [
+                { id: 501, name: "Mixer Concreto 210", price: 320.00, imageUrl: "https://ventasyofertas.com.pe/wp-content/uploads/2025/03/MX180-3P.jpg" },
+                { id: 502, name: "Servicio de Bomba de Concreto", price: 500.00, imageUrl: "https://th.bing.com/th/id/R.1ffcd0636fbf9754a322fade9b76ee23?rik=GVJk4ctSk%2bV6NQ&pid=ImgRaw&r=0" },
+                { id: 503, name: "Aditivo Acelerante (Galón)", price: 45.00, imageUrl: "https://www.materialesjerez.com.mx/wp-content/uploads/2016/11/Sikaset-L-Galon.png" },
+                { id: 504, name: "Cura para Concreto (Galón)", price: 38.00, imageUrl: "https://pe.sikaguia.com/wp-content/uploads/sites/8/2019/09/Sika%C2%AE-Cem-CURADOR-balde-4L-968x1024.jpg" }
+            ] 
+        },
+        { 
+            id: 6, 
+            name: "Distribuidora Santa Rosa", 
+            rating: 4.2, 
+            reviews: 30, 
+            location: "Chimbote", 
+            specialty: "Acabados y Pinturas",
+            certifications: ["Garantía"], 
+            products: [
+                { id: 601, name: "Balde Pintura Látex", price: 85.00, imageUrl: "https://promart.vteximg.com.br/arquivos/ids/8889223-700-700/135960.jpg" },
+                { id: 602, name: "Rodillo de Felpa 9\"", price: 15.00, imageUrl: "https://tse1.explicit.bing.net/th/id/OIP.JndevoZ3UHQvjDrd6N8ungHaFW?rs=1&pid=ImgDetMain&o=7&rm=3" },
+                { id: 603, name: "Bandeja para Pintar", price: 8.50, imageUrl: "https://elmachetazo.vtexassets.com/arquivos/ids/724333/Bandeja-Grande-para-Pintura_1.png?v=638448254395500000" },
+                { id: 604, name: "Lija de Pared #100 (Pliego)", price: 2.00, imageUrl: "https://artiplan.net/wp-content/uploads/2020/10/lija-100-1.jpg" }
+            ] 
+        }
     ],
     notifications: [
         { id: 1, message: "Nueva entrega en Nuevo Chimbote", time: "Hace 2 horas", read: false },
